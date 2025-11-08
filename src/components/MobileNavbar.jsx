@@ -13,9 +13,9 @@ function MobileNavbar() {
         isOpen && (
           <div className={`${isOpen ? "translate-x-0" : "-translate-x-full"} transform transition-transform duration-300 w-full h-screen absolute right-0 top-0 p-10 bg-black text-white`}>
             <div className='flex justify-end'>
-              <VscChromeClose className='text-2xl cursor-pointer' onClick={() => setIsOpen(!isOpen)} />
+              <VscChromeClose className='text-4xl cursor-pointer' onClick={() => setIsOpen(!isOpen)} />
             </div>
-            <div className='flex flex-col gap-5 h-full justify-center items-center  text-xl '>
+            <div className='flex flex-col gap-5 h-full justify-center items-center  text-3xl '>
               <a
                 onClick={() => setIsOpen(!isOpen)}
                 href="#"
