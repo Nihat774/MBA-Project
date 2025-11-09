@@ -4,6 +4,7 @@ function Services() {
    
     return (
         <div className='flex flex-col'>
+            
             <h2 className='text-4xl font-bold py-7 flex justify-center'>Services</h2>
             <div className='flex md:flex-row gap-5 md:gap-0 flex-col items-center justify-between'>
                 {

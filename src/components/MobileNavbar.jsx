@@ -3,7 +3,7 @@ import { VscChromeClose, VscListSelection } from 'react-icons/vsc'
 import { navLinks } from '../constants/navLinks'
 import { NavHashLink } from 'react-router-hash-link'
 
-function MobileNavbar() {
+function MobileNavbar({activeId}) {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
@@ -15,7 +15,7 @@ function MobileNavbar() {
             <div className='flex justify-end'>
               <VscChromeClose className='text-4xl cursor-pointer' onClick={() => setIsOpen(!isOpen)} />
             </div>
-            <div className='flex flex-col gap-5 justify-center  text-3xl '>
+            <div className='flex flex-col gap-5 justify-center  text-2xl '>
               <NavHashLink
                 onClick={() => setIsOpen(!isOpen)}
                 to="#"
@@ -26,8 +26,11 @@ function MobileNavbar() {
               </NavHashLink>
               {
                 navLinks.map((item) => {
+                  const isActive = item.path == activeId;
+                  console.log(activeId);
+                  
                   return (
-                    <NavHashLink onClick={() => setIsOpen(!isOpen)} className='hover:text-sky-600 transition-colors duration-300' smooth to={item.path} key={item.id}>{item.text}</NavHashLink>
+                    <NavHashLink onClick={() => setIsOpen(!isOpen)} className={`${isActive?"text-blue-600":""} hover:text-sky-600 transition-colors duration-300`} smooth to={item.path} key={item.id}>{item.text}</NavHashLink>
                   )
                 })
               }

@@ -8,7 +8,7 @@ function Footer() {
       <div className="max-w-7xl  px-6 py-10 flex flex-col md:flex-row justify-between gap-10 border-b -mx-10 md:-mx-20 border-gray-300 dark:border-gray-700">
         {/* Logo */}
         <div className="flex flex-col items-center md:items-start gap-3">
-          <img src="/icon.png" alt="logo" className="w-[120px] h-[120px]" />
+          <p className="text-2xl font-bold">LOGO</p>
           <p className="text-gray-600 dark:text-gray-400 text-center md:text-left">
             Lorem ipsum elit.
           </p>
