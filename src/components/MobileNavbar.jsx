@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { VscChromeClose, VscListSelection } from 'react-icons/vsc'
 import { navLinks } from '../constants/navLinks'
+import { NavHashLink } from 'react-router-hash-link'
 
 function MobileNavbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,17 +16,18 @@ function MobileNavbar() {
               <VscChromeClose className='text-4xl cursor-pointer' onClick={() => setIsOpen(!isOpen)} />
             </div>
             <div className='flex flex-col gap-5 justify-center  text-3xl '>
-              <a
+              <NavHashLink
                 onClick={() => setIsOpen(!isOpen)}
-                href="#"
+                to="#"
+                smooth
                 className="hover:text-sky-600 transition-colors duration-300"
               >
                 Home
-              </a>
+              </NavHashLink>
               {
                 navLinks.map((item) => {
                   return (
-                    <a onClick={() => setIsOpen(!isOpen)} className='hover:text-sky-600 transition-colors duration-300' href={item.path} key={item.id}>{item.text}</a>
+                    <NavHashLink onClick={() => setIsOpen(!isOpen)} className='hover:text-sky-600 transition-colors duration-300' smooth to={item.path} key={item.id}>{item.text}</NavHashLink>
                   )
                 })
               }

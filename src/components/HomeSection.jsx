@@ -50,7 +50,7 @@ export default function SimpleSlider() {
             <img
               src={item.image}
               alt=""
-              className="w-screen h-[40vh] md:h-[90vh]"
+              className="w-screen h-[40vh] md:h-[85vh]"
             />
           </div>
         ))}
