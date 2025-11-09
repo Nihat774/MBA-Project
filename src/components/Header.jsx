@@ -30,7 +30,7 @@ function Header() {
 
   return (
     <header className='bg-slate-100 py-4 z-50 shadow-md text-slate-900 flex items-center justify-between px-10 -mx-10 md:px-20 md:-mx-20 sticky top-0'>
-      <NavHashLink smooth to="#" className='font-bold text-2xl'>LOGO</NavHashLink>
+      <NavHashLink smooth to="#" className='font-bold text-2xl'>MBA</NavHashLink>
 
       {/* desktop */}
       <nav className='hidden md:flex font-semibold justify-between w-[60%]'>
